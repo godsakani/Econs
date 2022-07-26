@@ -1,11 +1,12 @@
 export const environment = {
   production: true,
   firebase : {
-    apiKey: "API_KEY",
-    authDomain: "oshop-3e649.firebaseapp.com",
-    projectId: "oshop-3e649",
-    storageBucket: "oshop-3e649.appspot.com",
-    messagingSenderId: "209115482999",
-    appId: "1:209115482999:web:f60b021803d63c1ebe2f72"
+  apiKey: "APK_KEY",
+  authDomain: "oshop-3e649.firebaseapp.com",
+  databaseURL: "https://oshop-3e649-default-rtdb.firebaseio.com",
+  projectId: "oshop-3e649",
+  storageBucket: "oshop-3e649.appspot.com",
+  messagingSenderId: "209115482999",
+  appId: "1:209115482999:web:f60b021803d63c1ebe2f72"
   }
 };
