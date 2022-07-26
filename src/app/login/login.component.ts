@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as firebase from '@firebase/app';
-
+import { AuthService } from '../shared/auth.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -8,12 +7,11 @@ import * as firebase from '@firebase/app';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(public auth: AuthService) { 
   }
-  login(){
 
+  
+  ngOnInit(): void {
   }
 
 }
