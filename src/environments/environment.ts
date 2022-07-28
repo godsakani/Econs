@@ -1,7 +1,7 @@
 export const environment = {
   production: false,
   firebase: {
-  apiKey: "API_Key",
+  // apiKey: "AIzaSyD7NdVkzYeGz-lOuVkUpr_Rw_be1woGGkc",
   authDomain: "oshop-3e649.firebaseapp.com",
   databaseURL: "https://oshop-3e649-default-rtdb.firebaseio.com",
   projectId: "oshop-3e649",
