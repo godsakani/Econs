@@ -21,6 +21,7 @@ import { LoginComponent } from './login/login.component';
 import { environment } from 'src/environments/environment';
 import { AuthService } from './shared/auth.service';
 import { AuthGuard } from './shared/auth-guard.service';
+import { UserService } from './shared/user.service';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,7 @@ import { AuthGuard } from './shared/auth-guard.service';
       {path: 'admin/orders', component: AdminOrdersComponent, canActivate: [AuthGuard]},
     ])
   ],
-  providers: [AuthService,AuthGuard],
+  providers: [AuthService,AuthGuard, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
