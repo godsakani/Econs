@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../shared/auth.service';
+import { Auth1Service } from '../shared/auth1.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,7 +7,7 @@ import { AuthService } from '../shared/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public auth: AuthService) { 
+  constructor(public authService: Auth1Service) { 
   }
 
   
