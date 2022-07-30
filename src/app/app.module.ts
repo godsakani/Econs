@@ -19,9 +19,10 @@ import { AdminProductsComponent } from './admin/admin-products/admin-products.co
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { LoginComponent } from './login/login.component';
 import { environment } from 'src/environments/environment';
-import { AuthService } from './shared/auth.service';
+import { Auth1Service } from './shared/auth1.service';
 import { AuthGuard } from './shared/auth-guard.service';
 import { UserService } from './shared/user.service';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { UserService } from './shared/user.service';
     MyOrdersComponent,
     AdminProductsComponent,
     AdminOrdersComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
@@ -49,6 +51,7 @@ import { UserService } from './shared/user.service';
       {path: 'products', component: ProductsComponent},
       {path: 'shopping-cart', component: ShoppingCartComponent},
       {path: 'login', component: LoginComponent},
+      {path: 'register', component: RegisterComponent},
       
       {path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuard]},
       {path: 'order-success', component: OrderSuccessComponent, canActivate: [AuthGuard]},
@@ -58,7 +61,7 @@ import { UserService } from './shared/user.service';
       {path: 'admin/orders', component: AdminOrdersComponent, canActivate: [AuthGuard]},
     ])
   ],
-  providers: [AuthService,AuthGuard, UserService],
+  providers: [Auth1Service,AuthGuard, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
